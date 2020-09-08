@@ -1,12 +1,3 @@
-/* eg: @include user-select(none); */
-/* eg: @include rotate(45deg); */
-/* eg: @include translate3d(0,0,0); */
-/* eg: @include border-radius(3px); */
-/* eg: @include visibility-backface(hidden); */
-/*------------------------------------------------------------------
-  	[The "base.scss" contains basic default element styles
-  		(colors, typography, margins & padding).]
-------------------------------------------------------------------*/
 html {
   overflow-x: hidden;
 }
@@ -29,9 +20,7 @@ p {
   margin-bottom: 15px;
 }
 
-em,
-li,
-li a {
+em, li, li a {
   font-size: 16px;
   font-weight: 500;
   font-family: Hind, sans-serif;
@@ -83,16 +72,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 15px;
 }
 
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
   color: #515769;
 }
 
-h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
+h1>a:hover, h2>a:hover, h3>a:hover, h4>a:hover, h5>a:hover, h6>a:hover {
   color: #999caa;
   text-decoration: none;
 }
 
-h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:focus {
+h1>a:focus, h2>a:focus, h3>a:focus, h4>a:focus, h5>a:focus, h6>a:focus {
   text-decoration: none;
 }
 
@@ -130,17 +119,18 @@ h4 {
   text-shadow: none;
 }
 
-:active,
-:focus {
+:active, :focus {
   outline: none;
 }
 
 /* Section Seperator */
+
 .section-seperator {
   border-bottom: 1px solid #edf0f2;
 }
 
 /* Content Wrapper Link */
+
 .content-wrapper-link {
   position: absolute;
   top: 0;
@@ -155,6 +145,7 @@ h4 {
 /*------------------------------------------------------------------
   	[Accordion]
 ------------------------------------------------------------------*/
+
 .accordion .panel-default {
   border: none;
 }
@@ -163,7 +154,7 @@ h4 {
   border-radius: 0;
 }
 
-.accordion .panel-default > .panel-heading {
+.accordion .panel-default>.panel-heading {
   color: #515769;
   background: #fff;
   border: none;
@@ -179,20 +170,19 @@ h4 {
   padding: 30px;
 }
 
-.accordion .panel-group .panel + .panel {
+.accordion .panel-group .panel+.panel {
   border-radius: 0;
   margin-top: 10px;
 }
 
-.accordion .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.accordion .panel-default>.panel-heading+.panel-collapse>.panel-body {
   font-size: 16px;
   border-top: none;
   padding: 0 30px 30px 30px;
   margin-top: -1px;
 }
 
-.accordion [aria-expanded="true"],
-.accordion .collapse.in {
+.accordion [aria-expanded="true"], .accordion .collapse.in {
   color: #fff;
   background: #0b64ac;
 }
@@ -200,6 +190,7 @@ h4 {
 /*------------------------------------------------------------------
   	[Button]
 ------------------------------------------------------------------*/
+
 .btn-theme {
   position: relative;
   display: inline-block;
@@ -237,8 +228,7 @@ h4 {
   outline: 0;
 }
 
-.btn-theme.disabled, .btn-theme[disabled],
-fieldset[disabled] .btn-theme {
+.btn-theme.disabled, .btn-theme[disabled], fieldset[disabled] .btn-theme {
   cursor: not-allowed;
   box-shadow: none;
   opacity: .65;
@@ -301,6 +291,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Pricing]
 ------------------------------------------------------------------*/
+
 .pricing {
   padding: 70px 45px;
   background: #fff;
@@ -354,13 +345,13 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Service]
 ------------------------------------------------------------------*/
+
 .service {
   background: #fff;
   padding: 50px;
 }
 
-.service .service-element,
-.service .service-info {
+.service .service-element, .service .service-info {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -398,7 +389,9 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Work]
 ------------------------------------------------------------------*/
+
 /* Overlay */
+
 .work {
   position: relative;
   display: block;
@@ -429,7 +422,25 @@ fieldset[disabled] .btn-theme {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
+.work .work-overlay img {
+  width: 33,3%;
+  height: 260px;
+}
+
+.work .work-overlay #prev-img-work {
+  width: 33,3%;
+  height: 390px;
+}
+
+
+
+.work .work-overlay #img-work {
+  width: 66,6%;
+  height: 390px;
+}
+
 /* Popup */
+
 .work .work-popup-overlay {
   position: fixed;
   top: 0;
@@ -507,6 +518,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Tag */
+
 .work .work-popup-tag {
   margin: 0;
 }
@@ -522,10 +534,6 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Footer]
 ------------------------------------------------------------------*/
-.footer .footer-logo {
-  width: 100px;
-  height: auto;
-}
 
 .footer .footer-list {
   margin-bottom: 0;
@@ -540,15 +548,35 @@ fieldset[disabled] .btn-theme {
   margin-bottom: 0;
 }
 
+footer .cont-sign {
+  align-items: center;
+}
+
+footer .footer-logo {
+  width: 60px;
+  height: 60px;
+}
+
+footer .cont-sign p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Hind, sans-serif;
+  color: #a6a7aa;
+  line-height: 1.4;
+}
+
 /*------------------------------------------------------------------
     [Header]
 ------------------------------------------------------------------*/
+
 /* Fixed Top */
+
 .navbar-fixed-top .navbar-collapse {
   max-height: 100%;
 }
 
 /* Navbar */
+
 .header .navbar {
   background: #05355c;
   margin-bottom: 0;
@@ -559,6 +587,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Navbar Toggle */
+
 .header .navbar-toggle {
   width: 25px;
   height: 25px;
@@ -630,17 +659,16 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Navbar Logo */
+
 .header .logo {
-  width: 150px;
-  height: 150px;
-  float: left;
+  width: 100px;
+  height: 100px;
   max-height: 95px;
   line-height: 65px;
 }
 
 .header .logo-wrap {
   display: inline-block;
-  padding: 15px 0;
 }
 
 .header .logo-wrap:focus, .header .logo-wrap:hover {
@@ -653,7 +681,6 @@ fieldset[disabled] .btn-theme {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  vertical-align: middle;
 }
 
 .header .logo-img-main {
@@ -671,6 +698,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Navbar */
+
 .header .navbar-nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -678,6 +706,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Nav */
+
 .header .nav-item {
   position: relative;
   display: block;
@@ -721,12 +750,20 @@ fieldset[disabled] .btn-theme {
   color: orange;
 }
 
+.header .nav li.active .nav-item-child {
+  color: orange;
+}
+
+.header .nav-item-child:hover, .page-on-scroll .header .nav-item-child:hover {
+  color: orange;
+}
+
 .header .nav-item-hover {
   position: relative;
 }
 
-
 /* Media Queries below 991px */
+
 @media (max-width: 991px) {
   /* Bootstrap collapse of navigation with a maximum width: 991px
     (Change it to any breakpoint you want to be collapsed) */
@@ -770,7 +807,7 @@ fieldset[disabled] .btn-theme {
   }
   /* Navbar Nav */
   .header .nav-item-child {
-    color: #515769;
+    color: rgb(250, 250, 250);
     line-height: 1.4;
     padding: 12px 12px 12px 15px;
   }
@@ -781,6 +818,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Media Queries below 767px */
+
 @media (max-width: 767px) {
   /* Menu Container */
   .header .menu-container {
@@ -789,14 +827,14 @@ fieldset[disabled] .btn-theme {
     margin-left: 0;
     margin-right: 0;
   }
-  .header .navbar > .container {
+  .header .navbar>.container {
     width: auto;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
   }
-  .header .navbar > .container > .nav-collapse {
+  .header .navbar>.container>.nav-collapse {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -805,6 +843,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Media Queries above 992px */
+
 @media (min-width: 992px) {
   /* Navbar */
   .header .navbar-nav-right {
@@ -813,6 +852,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* Page On Scroll */
+
 @media (min-width: 992px) {
   .page-on-scroll .header .navbar {
     background: #fff;
@@ -844,7 +884,8 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Contact]
 ------------------------------------------------------------------*/
-.contact-list > li {
+
+.contact-list>li {
   font-size: 13px;
   color: #81848f;
   margin-bottom: 10px;
@@ -853,6 +894,7 @@ fieldset[disabled] .btn-theme {
 /*--------------------------------------------------
     [Back To Top Theme Button]
 ----------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   right: 10px;
@@ -893,6 +935,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* The Button Becomes Visible */
+
 .back-to-top.back-to-top-is-visible {
   visibility: visible;
   opacity: .6;
@@ -912,6 +955,7 @@ fieldset[disabled] .btn-theme {
 }
 
 /* If the user keeps scrolling down, the button is out of focus and becomes less visible */
+
 .back-to-top.back-to-top-fade-out {
   opacity: .4;
 }
@@ -926,6 +970,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Form Control]
 ------------------------------------------------------------------*/
+
 .form-control {
   height: 50px;
   font-size: 14px;
@@ -970,6 +1015,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Full Screen Carousel]
 ------------------------------------------------------------------*/
+
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -979,6 +1025,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Carousel]
 ------------------------------------------------------------------*/
+
 .carousel-indicators {
   left: auto;
   width: auto;
@@ -1002,10 +1049,9 @@ fieldset[disabled] .btn-theme {
   text-transform: uppercase;
 }
 
-.carousel-centered .btn-theme:hover, .btn-theme:active{
+.carousel-centered .btn-theme:hover, .btn-theme:active {
   opacity: 0.9;
   color: #fff;
-  
 }
 
 @media (max-width: 768px) {
@@ -1023,6 +1069,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Swiper Slider]
 ------------------------------------------------------------------*/
+
 .swiper-slider {
   position: relative;
   width: 100%;
@@ -1050,76 +1097,15 @@ fieldset[disabled] .btn-theme {
 }
 
 /*------------------------------------------------------------------
-  	[Text Colors]
-------------------------------------------------------------------*/
-/* .color-base {
-  color: #17bed2 !important;
-}
-
-.color-white {
-  color: #fff !important;
-}
-
-.color-heading {
-  color: #515769 !important;
-}
-
-.color-subtitle {
-  color: #a6a7aa !important;
-}
-
-.color-link {
-  color: #81848f !important;
-}
-
-.color-link-hover {
-  color: #999caa !important;
-}
-
-.color-sky-light {
-  color: #fafafa !important;
-} */
-
-/*------------------------------------------------------------------
-  	[Background Colors]
-------------------------------------------------------------------*/
-/* .bg-color-base {
-  background: #17bed2 !important;
-}
-
-.bg-color-white {
-  background: #fff !important;
-}
-
-.bg-color-heading {
-  background: #515769 !important;
-}
-
-.bg-color-subtitle {
-  background: #a6a7aa !important;
-}
-
-.bg-color-link {
-  background: #81848f !important;
-}
-
-.bg-color-link-hover {
-  background: #999caa !important;
-}
-
-.bg-color-sky-light {
-  background: #fafafa !important;
-} */
-
-/*------------------------------------------------------------------
     [Row]
 ------------------------------------------------------------------*/
+
 .row-space-1 {
   margin-right: -1px;
   margin-left: -1px;
 }
 
-.row-space-1 > [class*="col-"] {
+.row-space-1>[class*="col-"] {
   padding-left: 1px;
   padding-right: 1px;
 }
@@ -1127,6 +1113,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
   	[Content]
 ------------------------------------------------------------------*/
+
 .content {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1150,6 +1137,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Full Width]
 ------------------------------------------------------------------*/
+
 .full-width {
   width: 100%;
   height: auto;
@@ -1158,6 +1146,7 @@ fieldset[disabled] .btn-theme {
 /*--------------------------------------------------
     [Font Weight]
 ----------------------------------------------------*/
+
 .fweight-300 {
   font-weight: 300 !important;
 }
@@ -1181,6 +1170,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Left margin]
 ------------------------------------------------------------------*/
+
 .margin-l-0 {
   margin-left: 0 !important;
 }
@@ -1200,6 +1190,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Right margin]
 ------------------------------------------------------------------*/
+
 .margin-r-0 {
   margin-right: 0 !important;
 }
@@ -1219,6 +1210,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Top margin]
 ------------------------------------------------------------------*/
+
 .margin-t-0 {
   margin-top: 0 !important;
 }
@@ -1335,6 +1327,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Bottom margin]
 ------------------------------------------------------------------*/
+
 .margin-b-0 {
   margin-bottom: 0 !important;
 }
@@ -1390,6 +1383,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Top margin below 992px]
 ------------------------------------------------------------------*/
+
 @media (max-width: 992px) {
   .md-margin-b-0 {
     margin-bottom: 0 !important;
@@ -1435,6 +1429,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Top margin below 768px]
 ------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .sm-margin-b-0 {
     margin-bottom: 0 !important;
@@ -1480,6 +1475,7 @@ fieldset[disabled] .btn-theme {
 /*------------------------------------------------------------------
     [Top margin below 480px]
 ------------------------------------------------------------------*/
+
 @media (max-width: 480px) {
   .xs-margin-b-0 {
     margin-bottom: 0 !important;
@@ -1525,6 +1521,7 @@ fieldset[disabled] .btn-theme {
 /*--------------------------------------------------
     [Height]
 ----------------------------------------------------*/
+
 .height-100 {
   height: 100px !important;
 }
