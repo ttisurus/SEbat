@@ -11,10 +11,15 @@ body {
   font-family: sans-serif;
 }
 
+@font-face {
+  font-family: conthrax-sb;
+  src: url(/css/conthrax-sb.ttf);
+}
+
 p {
   font-size: 15px;
   font-weight: 400;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #a6a7aa;
   line-height: 1.4;
   margin-bottom: 15px;
@@ -23,12 +28,12 @@ p {
 em, li, li a {
   font-size: 16px;
   font-weight: 500;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #515769;
 }
 
 a {
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #81848f;
   outline: 0;
 }
@@ -43,7 +48,7 @@ a:focus, a:hover, a:active {
   position: relative;
   font-size: 13px;
   font-weight: 600;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
 }
 
@@ -60,13 +65,13 @@ a:focus, a:hover, a:active {
 span {
   font-size: 14px;
   font-weight: 400;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #bfc1c7;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #515769;
   line-height: 1.4;
   margin: 0 0 15px;
@@ -184,7 +189,7 @@ h4 {
 
 .accordion [aria-expanded="true"], .accordion .collapse.in {
   color: #fff;
-  background: #0b64ac;
+  background: #4b5357;
 }
 
 /*------------------------------------------------------------------
@@ -277,13 +282,13 @@ h4 {
   font-size: 13px;
   font-weight: 600;
   padding: 15px 40px;
-  background: #05355c;
+  background: #232729;
   color: #fff;
-  border-color: #05355c;
+  border-color: #232729;
 }
 
 .btn-theme-sm:hover, .btn-theme.sm:active {
-  background: #05355c;
+  background: #232729;
   opacity: 0.9;
   border-color: transparent;
 }
@@ -423,19 +428,17 @@ h4 {
 }
 
 .work .work-overlay img {
-  width: 33,3%;
+  width: 33, 3%;
   height: 260px;
 }
 
 .work .work-overlay #prev-img-work {
-  width: 33,3%;
+  width: 33, 3%;
   height: 390px;
 }
 
-
-
 .work .work-overlay #img-work {
-  width: 66,6%;
+  width: 66, 6%;
   height: 390px;
 }
 
@@ -548,11 +551,7 @@ h4 {
   margin-bottom: 0;
 }
 
-footer .cont-sign {
-  align-items: center;
-}
-
-footer .footer-logo {
+footer .cont-sign .footer-logo {
   width: 60px;
   height: 60px;
 }
@@ -560,7 +559,7 @@ footer .footer-logo {
 footer .cont-sign p {
   font-size: 15px;
   font-weight: 400;
-  font-family: Hind, sans-serif;
+  font-family: sans-serif;
   color: #a6a7aa;
   line-height: 1.4;
 }
@@ -578,7 +577,7 @@ footer .cont-sign p {
 /* Navbar */
 
 .header .navbar {
-  background: #05355c;
+  background: #232729;
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition-duration: 300ms;
@@ -663,8 +662,6 @@ footer .cont-sign p {
 .header .logo {
   width: 100px;
   height: 100px;
-  max-height: 95px;
-  line-height: 65px;
 }
 
 .header .logo-wrap {
@@ -678,7 +675,7 @@ footer .cont-sign p {
 .header .logo-img {
   display: inline-block;
   width: 146px;
-  height: auto;
+  height: 100px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -735,7 +732,7 @@ footer .cont-sign p {
   display: block;
   font-size: 13px;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: conthrax-sb, sans-serif;
   color: #fafafa;
   text-transform: uppercase;
   line-height: 55px;
@@ -800,10 +797,10 @@ footer .cont-sign p {
   }
   /* Logo */
   .header .logo .logo-img-main {
-    display: none;
+    display: inline-block;
   }
   .header .logo .logo-img-active {
-    display: inline-block;
+    display: none;
   }
   /* Navbar Nav */
   .header .nav-item-child {
@@ -885,10 +882,13 @@ footer .cont-sign p {
   	[Contact]
 ------------------------------------------------------------------*/
 
-.contact-list>li {
-  font-size: 13px;
-  color: #81848f;
-  margin-bottom: 10px;
+#contacto-btn {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 13px 25px;
+  background: #232729;
+  color: #fff;
+  border-color: #232729;
 }
 
 /*--------------------------------------------------
