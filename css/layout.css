@@ -428,12 +428,12 @@ h4 {
 }
 
 .work .work-overlay img {
-  width: 33, 3%;
+  width: 33,3%;
   height: 260px;
 }
 
 .work .work-overlay #prev-img-work {
-  width: 33, 3%;
+  width: 33,3%;
   height: 390px;
 }
 
@@ -675,8 +675,8 @@ footer .cont-sign p {
 /* Navbar Logo */
 
 .header .logo {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
 }
 
 .header .logo-wrap {
@@ -1111,6 +1111,11 @@ footer .cont-sign p {
   color: #fff;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.carousel-inner .item #atencion::before {
+  position: absolute;
+  background-color: #232729;
 }
 
 .carousel-centered .btn-theme:hover, .btn-theme:active {
