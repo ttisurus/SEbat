@@ -746,7 +746,7 @@
     <div id="contact">
         <div class="section-seperator">
             <div class="content-lg container">
-                <div class="row">
+                <div class="row" id="cont-form">
                     <section class="mb-4">
                         <!--Section heading-->
                         <h2 class="h1-responsive font-weight-bold text-center my-4">Contacto</h2>
@@ -761,15 +761,15 @@
                                             <div class="md-form mb-0">
                                                 <label for="name" class="">Nombre</label>
                                                 <input type="text" id="name" name="name" class="form-control"
-                                                    placeholder="Nombre..." pattern=[A-Z\sa-z]{3,20} required>
+                                                    placeholder="Nombre..." pattern=[A-Z\sa-z]{3,20}>
                                             </div>
                                         </div>
                                         <!--Grid column-->
                                         <div class="col-md-6">
                                             <div class="md-form mb-0">
-                                                <label for="email" class="">e-mail</label>
+                                                <label for="email" class="">E-mail</label>
                                                 <input type="text" id="email" name="email" class="form-control"
-                                                    placeholder="...@contact.me" required>
+                                                    placeholder="...@contact.me">
                                             </div>
                                         </div>
                                         <!--Grid column-->
@@ -778,8 +778,8 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="md-form mb-0">
-                                                <input type="text" id="subject" name="subject" class="form-control">
-                                                <label for="subject" class="">Subject</label>
+                                                <label for="subject" class="">Motivo</label>
+                                                <input type="text" id="subject" name="subject" class="form-control">                                                
                                             </div>
                                         </div>
                                     </div>
@@ -789,33 +789,34 @@
                                         <div class="col-md-12">
                                             <div class="md-form">
                                                 <label for="message">Dejanos tu mensaje</label>
-                                                <textarea type="text" id="message" name="message" rows="2"
-                                                    class="form-control " placeholder="deja tu mensaje..." required>
+                                                <textarea type="text" id="message" name="message"
+                                                    class="form-control " placeholder="deja tu mensaje...">
                                                 </textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Grid row-->
+
+                                    <div class="text-center text-md-right">
+                                        <!-- <button class="btn-theme btn-theme-sm btn-white-brd text-uppercase" id="contacto-btn">Enviar</button> -->
+                                        <input type="submit" class="btn-theme btn-theme-sm btn-white-brd text-uppercase"
+                                            id="contacto-btn" onclick="validateForm()" value="Enviar">
+                                    </div>
+                                    <div id="status"></div>
                                 </form>
-                                <div class="text-center text-md-right">
-                                    <!-- <button class="btn-theme btn-theme-sm btn-white-brd text-uppercase" id="contacto-btn">Enviar</button> -->
-                                    <input type="submit" class="btn-theme btn-theme-sm btn-white-brd text-uppercase"
-                                        id="contacto-btn" onclick="validateForm()" value="Enviar">
-                                </div>
-                                <div class="status"></div>
                             </div>
                             <!--Grid column-->
-                            <div class="col-md-3 text-center">
+                            <div class="col-md-3 text-center" id="cont-datos-contacto">
                                 <ul class="list-unstyled mb-0">
-                                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                    <li><i class="service-icon icon-map"></i>
                                         <p>Direccion</p>
                                     </li>
 
-                                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                    <li><i class="service-icon icon-call-end"></i>
                                         <p>Telefono</p>
                                     </li>
 
-                                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                    <li><i class="service-icon icon-pencil"></i>
                                         <p>mail</p>
                                     </li>
                                 </ul>
@@ -836,8 +837,8 @@
         <!-- Links -->
         <div class="section-seperator">
             <div class="content-md container container-footer">
-                <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
+                <div class="row" id="cont-social">
+                    <div class="col-sm-3 sm-margin-b-30 socialmedia">
                         <!-- List -->
                         <ul class="list-unstyled footer-list">
                             <li class="footer-list-item"><a href="#body">Inicio</a></li>
@@ -848,7 +849,7 @@
                     </div>
                     <div class="col-sm-3 sm-margin-b-30">
                         <!-- List -->
-                        <ul class="list-unstyled footer-list">
+                        <ul class="list-unstyled footer-list socialmedia">
                             <li class="footer-list-item"><a href="https://www.instagram.com/">Instagram</a></li>
                             <li class="footer-list-item"><a href="https://www.facebook.com/">Facebook</a></li>
                             <li class="footer-list-item"><a href="#">Whats App</a></li>
@@ -857,7 +858,7 @@
                     </div>
                     <!-- Google Map -->
                     <div class="map height-300">
-                        <iframe
+                        <iframe id="map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.0694570748947!2d7.455080415208266!3d46.94067397914616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39d0cf20e8d1%3A0x9daac4cd3043d067!2sThunstrasse+50%2C+3005+Bern%2C+Switzerland!5e0!3m2!1sen!2sin!4v1496749852928"
                             width="40%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>

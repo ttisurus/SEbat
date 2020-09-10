@@ -1,8 +1,9 @@
 <?php
-/* $name = $_POST['name'];
+$name = $_POST['name'];
 $email = $_POST['email'];
-$message = $_POST['message'];
 $subject = $_POST['subject'];
+$message = $_POST['message'];
+
 header('Content-Type: application/json');
 if ($name === ''){
   print json_encode(array('message' => 'Completar con su nombre', 'code' => 0));
@@ -32,5 +33,9 @@ $recipient = "argdan90@gmail.com";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 print json_encode(array('message' => 'Su mensaje ha sido enviado. Muchas gracias!', 'code' => 1));
-exit(); */
+/* if($email) {
+  echo "<script>alert('Su mensaje a sido enviado')</script>";
+  echo "<script> setTimeout(\"location.href='index.html'\",1000)</script>";
+} */
+exit();
 ?>
