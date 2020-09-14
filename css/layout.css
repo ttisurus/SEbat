@@ -404,7 +404,6 @@ h4 {
 
 .work .work-overlay {
   position: relative;
-  cursor: pointer;
 }
 
 .work .work-overlay:before {
@@ -440,57 +439,6 @@ h4 {
 .work .work-overlay #img-work {
   width: 66, 6%;
   height: 390px;
-}
-
-/* Popup */
-
-.work .work-popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow-x: hidden;
-  background: rgba(81, 87, 105, 0.4);
-  transition-duration: 300ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-}
-
-.work .work-popup-overlay-show {
-  opacity: 1;
-  visibility: visible;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  transition-duration: 300ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-}
-
-.work .work-popup-content {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  width: 730px;
-  height: auto;
-  display: block;
-  background: #fff;
-  padding: 30px;
-  margin: 0 auto;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -moz-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
-}
-
-.work .work-popup-content-divider {
-  border-right: 1px solid #cdcecf;
 }
 
 @media (max-width: 768px) {
@@ -675,8 +623,8 @@ footer .cont-sign p {
 /* Navbar Logo */
 
 .header .logo {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
 }
 
 .header .logo-wrap {
@@ -920,6 +868,13 @@ footer .cont-sign p {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
+  resize: none;
+  text-align: left;
+  overflow: hidden;
+}
+
+form textarea .message {
+  padding: 5px;
 }
 
 #contacto-btn {

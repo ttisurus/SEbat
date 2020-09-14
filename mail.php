@@ -28,7 +28,7 @@ if ($message === '') {
 
 
 $content="From: $name \nEmail: $email \nMessage: $message";
-$recipient = "argdan90@gmail.com";
+$recipient = "sebatenergia@gmail.com";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $content, $mailheader) or die("Error!");
 print_message('Su mensaje ha sido enviado. Muchas gracias!', 1);
