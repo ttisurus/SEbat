@@ -512,7 +512,7 @@ footer .cont-sign p {
   line-height: 1.4;
 }
 
-@media screen and (min-width: 290px) and (max-width: 768px) {
+@media screen and (min-width: 325px) and (max-width: 768px) {
 
   #contact #cont-form {
     margin: auto;
